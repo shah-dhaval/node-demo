@@ -2,7 +2,7 @@ var express = require('express');
 var hbs = require('hbs');
 var app     = express();
 var fs = require('fs');
-
+var port = process.env.PORT || 3000
 
 
 hbs.registerPartials(__dirname + '/views/partials')
@@ -45,4 +45,4 @@ app.get('/about', function(req, resp)
     })
 });
 
-app.listen(3000);
+app.listen(port);
